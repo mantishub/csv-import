@@ -269,7 +269,7 @@
                   </div>
                </div>
                <div class="widget-toolbox padding-8 clearfix">
-			      <input type="submit" class="btn btn-primary btn-white btn-round" id="importForm" value="<?php echo plugin_lang_get( 'file_button' ) ?>" onclick="return checkFields();" />
+			      <input type="submit" class="btn btn-primary btn-white btn-round" id="importForm" value="<?php echo plugin_lang_get( 'file_button' ) ?>" data-duplicate-message="<?php echo htmlspecialchars( plugin_lang_get( 'error_col_select_multiple' ), ENT_QUOTES, 'UTF-8' ) ?>" />
                </div>
             </div>
          </div>
@@ -278,29 +278,7 @@
    <div class="space-10"></div>
 </div>
 
-<script type="text/javascript">
-function checkFields() {
-	var allDropdowns = document.getElementsByName("columns[]");
-	var dropdownArray = [];
-	var dupeArray = [];
-	var dupeCnt = 0;
-	for(var x = 0; x < allDropdowns.length; x++) {
-		var currentDropdown = allDropdowns[x].options[allDropdowns[x].options.selectedIndex];
-		if (dropdownArray.indexOf(currentDropdown.value) < 0) {
-			dropdownArray[x] = currentDropdown.value;
-		} else if (currentDropdown.value != 'ignore_column') {
-			dupeArray[dupeCnt] = currentDropdown.text;
-			dupeCnt++;
-		}
-	}
-	if (dupeArray.length > 0) {
-		alert('<?php echo str_replace('\'', '\\\'', plugin_lang_get( 'error_col_select_multiple' )) ?>\r\n\r\n' + dupeArray.toString().replace(/,/g, "\r\n"));
-		return false;
-	} else {
-		return true;
-	}
-}
-</script>
+<script src="<?php echo plugin_file( 'import_col_set.js' ) ?>"></script>
 
 <?php
 layout_page_end();

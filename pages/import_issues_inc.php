@@ -139,7 +139,7 @@ function category_get_id_by_name_ne( $p_category_name, $p_project_id ) {
 }
 
 function prepare_output( $t_string , $t_encode_only = false ) {
-	return string_html_specialchars( utf8_encode($t_string) );
+	return string_html_specialchars( mb_convert_encoding( $t_string, 'UTF-8', 'ISO-8859-1' ) );
 }
 
 function get_csv_import_category_id( $p_project_id, $p_category_name ) {
@@ -221,7 +221,7 @@ function get_date_column_value( $p_name, $p_row, $p_default ) {
 
 
 function string_MkPretty( $t_str ) {
-	$t_str = utf8_encode(strtolower(trim(utf8_decode($t_str))));
+	$t_str = mb_convert_encoding( strtolower( trim( mb_convert_encoding( $t_str, 'ISO-8859-1', 'UTF-8' ) ) ), 'UTF-8', 'ISO-8859-1' );
 	$t_str = preg_replace('/\xfc/ui', 'ue', $t_str);
 	$t_str = preg_replace('/\xf6/ui', 'oe', $t_str);
 	$t_str = preg_replace('/\xe4/ui', 'ae', $t_str);
@@ -274,7 +274,7 @@ function get_user_column_value( $p_name, $p_row, $p_default ) {
 function get_column_value( $p_name, $p_row, $p_default = '' ) {
 	global $f_columns;
 	$t_column = array_isearch( $p_name, $f_columns );
-	$t_value = ( ($t_column === false) || (!isset( $p_row[$t_column] )) ) ? $p_default : utf8_encode(trim( $p_row[$t_column] ));
+	$t_value = ( ($t_column === false) || (!isset( $p_row[$t_column] )) ) ? $p_default : mb_convert_encoding( trim( $p_row[$t_column] ), 'UTF-8', 'ISO-8859-1' );
 
 	$t_value = str_replace( '\n', "\n", $t_value );
 	return $t_value;

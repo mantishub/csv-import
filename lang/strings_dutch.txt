@@ -33,6 +33,7 @@ $s_plugin_Csv_import_error_file_not_opened = 'Kan bestand niet openen';
 $s_plugin_Csv_import_error_col_multiple = 'Zelfde kolom meer dan één keer gedefinieerd';
 $s_plugin_Csv_import_error_bug_not_exist = 'Melding %d bestaat niet';
 $s_plugin_Csv_import_error_bug_bad_project = 'Melding %d bestaat niet in het huidige project';
+$s_plugin_Csv_import_error_summary_too_long = 'De samenvatting is %d tekens lang, het maximum is %d';
 $s_plugin_Csv_import_error_any = 'Fout tijdens melding "%s"';
 $s_plugin_Csv_import_error_custom_field = 'Fout tijdens importeren gebruikersveld "%s" voor melding "%s"';
 $s_plugin_Csv_import_error_col_select_multiple = 'De volgende velden zijn geselecteerdvoor meer dan n kolom:';

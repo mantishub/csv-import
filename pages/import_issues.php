@@ -324,6 +324,15 @@ foreach( $t_file_content as $t_file_row ) {
 	   $t_operation_type = 'nothing';
 	}
 
+	# Skip rows whose summary does not fit the database column, rather than
+	# letting the insert fail and abort the whole import.
+	if( $t_operation_type != 'nothing' && mb_strlen( $t_bug_data->summary ) > Csv_importPlugin::SUMMARY_MAX_LENGTH ) {
+		$t_failure_count++;
+		$t_error_messages .= sprintf( $lineNumber . ' : ' . plugin_lang_get( 'error_summary_too_long' ),
+			mb_strlen( $t_bug_data->summary ), Csv_importPlugin::SUMMARY_MAX_LENGTH ) . '<br />';
+		continue;
+	}
+
 	$t_success_count[$t_operation_type]++;
 
 	# Set values
@@ -394,7 +403,7 @@ if( $t_failure_count ) {
 	echo '<b>'.sprintf( plugin_lang_get( 'result_failure_ct' ), $t_failure_count) . ' :</b><br />';
    echo $t_error_messages . '<br/>';
 }
-print_bracket_link( $t_redirect_url, lang_get( 'proceed' ) );
+print_link_button( $t_redirect_url ?? 'view_all_bug_page.php', lang_get( 'proceed' ) );
 ?>
 </div>
 </div>

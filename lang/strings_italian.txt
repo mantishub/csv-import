@@ -33,6 +33,7 @@ $s_plugin_Csv_import_error_file_not_opened = 'Impossibile aprire il file';
 $s_plugin_Csv_import_error_col_multiple = 'Stessa colonna presente piu\' volte';
 $s_plugin_Csv_import_error_bug_not_exist = 'Il bug %d non esiste';
 $s_plugin_Csv_import_error_bug_bad_project = 'Il bug %d non fa parte del progetto corrente';
+$s_plugin_Csv_import_error_summary_too_long = 'Il riepilogo ha %d caratteri (massimo %d)';
 $s_plugin_Csv_import_error_any = 'Errore nel trattamento del bug "%s"';
 $s_plugin_Csv_import_error_custom_field = 'Errore d\'importazione del campo personalizzato "%s" per il bug "%s"';
 $s_plugin_Csv_import_error_col_select_multiple = 'I campi seguenti sono stati selezionati per piu\' di una colonna:';

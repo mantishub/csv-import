@@ -1,6 +1,11 @@
 <?php
 class Csv_importPlugin extends MantisPlugin
 {
+	/**
+	 * Size of the summary column in the bug table (see admin/schema.php)
+	 */
+	const SUMMARY_MAX_LENGTH = 128;
+
 	function register() {
 		$this->name = plugin_lang_get( 'title' );
 		$this->description = plugin_lang_get( 'description' );

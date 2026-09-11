@@ -34,6 +34,7 @@ $s_plugin_Csv_import_error_file_not_opened = 'Cannot open file';
 $s_plugin_Csv_import_error_col_multiple = 'Same column defined more than once';
 $s_plugin_Csv_import_error_bug_not_exist = 'The bug %d does not exist';
 $s_plugin_Csv_import_error_bug_bad_project = 'The bug %d is not in the current project';
+$s_plugin_Csv_import_error_summary_too_long = 'The summary is %d characters long, the maximum is %d';
 $s_plugin_Csv_import_error_any = 'Error while treating the bug "%s"';
 $s_plugin_Csv_import_error_custom_field = 'Error while importing custom field "%s" for the bug "%s"';
 $s_plugin_Csv_import_error_col_select_multiple = 'The following fields have been selected for more than one column:';

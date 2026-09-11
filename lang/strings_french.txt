@@ -34,7 +34,6 @@ $s_plugin_Csv_import_error_file_not_opened = 'Impossible d\'ouvrir le fichier';
 $s_plugin_Csv_import_error_col_multiple = 'La même colonne est définie plusieurs fois';
 $s_plugin_Csv_import_error_bug_not_exist = 'Le bogue %d n\'existe pas';
 $s_plugin_Csv_import_error_bug_bad_project = 'Le bogue %d n\'est pas dans le projet courrant';
-$s_plugin_Csv_import_error_summary_too_long = 'Le résumé fait %d caractères, le maximum est %d';
 $s_plugin_Csv_import_error_any = 'Erreur lors du traitement du bogue "%s"';
 $s_plugin_Csv_import_error_custom_field = 'Erreur lors de l\import du champ personnalisé "%s" pour le bogue "%s"';
 $s_plugin_Csv_import_error_col_select_multiple = 'Les champs suivants ont sélectionnés pour plus d\'une fois :';

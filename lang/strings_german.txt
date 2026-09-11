@@ -33,7 +33,6 @@ $s_plugin_Csv_import_error_file_not_opened = 'Cannot open file';
 $s_plugin_Csv_import_error_col_multiple = 'Die gleiche Spalte wurde mehr als einmal definiert';
 $s_plugin_Csv_import_error_bug_not_exist = 'Das Problem %d existiert nicht';
 $s_plugin_Csv_import_error_bug_bad_project = 'Das Problem %d ist nicht im aktuellen Projekt enthalten';
-$s_plugin_Csv_import_error_summary_too_long = 'Die Zusammenfassung ist %d Zeichen lang, das Maximum ist %d';
 $s_plugin_Csv_import_error_any = 'Bei der Verarbeitung des Problems "%s" trat ein Fehler auf';
 $s_plugin_Csv_import_error_custom_field = 'Beim Import des benutzerdefinierten Feldes "%s" zu Problem "%s" trat ein Fehler auf';
 $s_plugin_Csv_import_error_col_select_multiple = 'The following fields have been selected for more than one column:';
